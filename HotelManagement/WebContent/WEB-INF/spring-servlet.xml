@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:lang="http://www.springframework.org/schema/lang"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/jee
+         http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang
+         http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util.xsd
+          http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+   
+     <context:component-scan base-package="com.*" />
+   
+<!--    
+   <context:component-scan base-package="com.serviceClass.CheckAvailabilityServiceClass"/>
+    <context:component-scan base-package="com.serviceInterface.CheckAvailabilityServiceInterface"/>
+    <context:component-scan base-package="com.daoInterface.CheckAvailabilityInterface"/>
+    <context:component-scan base-package="com.daoClass.CheckAvailabilityClass"/> 
+   
+ -->      
+    <!-- <context:component-scan base-package="com.master.controller" />
+     <context:component-scan base-package="com.master.serviceClass"/>
+    <context:component-scan base-package="com.master.serviceInterface"/>
+    <context:component-scan base-package="com.master.daoInterface"/>
+    <context:component-scan base-package="com.master.daoClass"/>  
+    
+   
+ 	<context:component-scan base-package="com.purchase.controller" />
+  
+    <context:component-scan base-package="com.purchase.serviceClass"/>
+    <context:component-scan base-package="com.purchase.serviceInterface"/>
+    <context:component-scan base-package="com.purchase.daoClass"/>
+    <context:component-scan base-package="com.purchase.daoInterface"/>
+    <context:component-scan base-package="com.purchase.dto"/> -->
+    <!-- 
+    <context:component-scan base-package="com.sale.controller" />
+    <context:component-scan base-package="com.sale.serviceClass"/>
+    <context:component-scan base-package="com.sale.serviceInterface"/>
+    <context:component-scan base-package="com.sale.daoClass"/>
+    <context:component-scan base-package="com.sale.daoInterface"/>    29/july-->
+   <!--    
+    <context:component-scan base-package="com.stock.controller"/>
+    <context:component-scan base-package="com.stock.serviceClass"/>
+    <context:component-scan base-package="com.stock.serviceInterface"/>
+    <context:component-scan base-package="com.stock.daoClass"/>
+    <context:component-scan base-package="com.stock.daoInterface"/>
+    
+    <context:component-scan base-package="com.balance.controller"/>
+    <context:component-scan base-package="com.balance.serviceClass"/>
+    <context:component-scan base-package="com.balance.serviceInterface"/>
+    <context:component-scan base-package="com.balance.daoClass"/>
+    <context:component-scan base-package="com.balance.daoInterface"/>
+    
+    		
+     -->
+  <!--  <context:component-scan base-package="com.master.dao"/>
+   <context:component-scan base-package="com.master.service"/>
+   <context:component-scan base-package="com.master.daoInterface" />
+   <context:component-scan base-package="com.master.serviceIntrface"/> -->
+       
+  <!--   <bean id="accessoriesMasterServiceInterface" class="com.master.serviceClass.AccessoriesMasterServiceClass"/>
+    <bean id="accessoriesMasterDaoInterface" class="com.master.daoClass.AccessoriesMasterDaoClass"/>
+     
+     <bean id="brandMasterServiceInterface" class="com.master.serviceClass.BrandMasterServiceClass"/>
+    <bean id="brandMasterDaoInterface" class="com.master.daoClass.BrandMasterDaoClass"/>
+    
+    <bean id="subBrandMasterServiceInterface" class="com.master.serviceClass.SubBrandMasterServiceClass"/>
+    <bean id="subBrandMasterDaoInterface" class="com.master.daoClass.SubBrandMasterDaoClass"/>
+    
+     <bean id="supplierMasterServiceInterface" class="com.master.serviceClass.SupplierMasterServiceClass"/>
+    <bean id="supplierMasterDaoInterface" class="com.master.daoClass.SupplierMasterDaoClass"/>
+    
+    <bean id="taxNameValueServiceInterface" class="com.master.serviceClass.TaxNameValueServiceClass"/>
+    <bean id="taxNameValueDaoInterface" class="com.master.daoClass.TaxNameValueDaoC"/>
+   
+    <bean id="taxTypeMasterServiceInterface" class="com.master.serviceClass.TaxTypeMasterServiceClass"/>
+    <bean id="taxTypeMasterDaoInterface" class="com.master.daoClass.TaxTypeMasterDaoClass"/>  29july
+ -->
+     
+   <!-- <context:component-scan base-package="com.student.dao"/>
+   <context:component-scan base-package="com.student.service"/>
+   <context:component-scan base-package="com.student.daoInterface" />
+   <context:component-scan base-package="com.student.serviceIntrface"/>
+       
+    <bean id="administratorServiceInterface" class="com.administrator.service.AdministratorServiceC"/>
+    <bean id="administratorDaoInterface" class="com.administrator.dao.AdministratorDaoC"/>
+     
+    <bean id ="ledgerFeePaidModel" class="com.account.model.LedgerFeePaidModel"/>
+        <bean id ="transactionDetailsModel" class="com.account.model.TransactionDetailsModel"/>
+            <bean id ="DiscountModel" class="com.account.model.discountModel"/>
+    --> 
+     <bean id="viewResolver"  
+        class="org.springframework.web.servlet.view.UrlBasedViewResolver">  
+        <property name="viewClass">  
+            <value>  
+                org.springframework.web.servlet.view.tiles2.TilesView  
+            </value>  
+        </property>  
+    </bean>  
+    <bean id="tilesConfigurer"  
+        class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">  
+        <property name="definitions">  
+            <list>  
+                <value>/WEB-INF/tiles.xml</value>  
+            </list>  
+        </property>  
+    </bean> 
+    
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    	<property name="url" value="jdbc:mysql://localhost:3306/HotelManagementDB"/>
+    	<property name="username" value="root"></property>
+    	<property name="password" value="root"></property>
+     </bean>
+    
+   
+   <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource"></property>
+    	
+    
+    	
+    	<property name="configLocation">
+            <value>classpath:hibernate.cfg.xml</value>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+ 
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <bean id="transactionManager"
+        class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+     
+    <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"></bean>
+ 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+  			<list>
+    			<ref bean="jacksonMessageConverter"/>
+  			</list>
+		</property>
+	</bean>  
+      
+</beans>  

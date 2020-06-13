@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Administrator base layout -->
+	<definition name="base.HotelManagement" template="/baselayout.jsp">
+		<put-attribute name="header" value="/HotelManagementHeader.jsp" />
+		<put-attribute name="footer" value="/HotelManagementFooter.jsp" />
+		<put-attribute name="menu" value="/HotelManagementMenu.jsp" />
+	</definition>
+
+	<definition name="base.login" template="/baselayout.jsp">
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- Login Page -->
+
+	<definition name="LoginPageView" extends="base.login">
+		<put-attribute name="title" value="Login Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Login/LoginPage.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+
+	<definition name="HomePageView" extends="base.HotelManagement">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Login/HomePage.jsp" />
+	</definition>
+	
+		<definition name="RegisterPageView" extends="base.HotelManagement">
+		<put-attribute name="title" value="Register Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Register/RegisterCustomer.jsp" />
+	</definition>
+	
+	<definition name="CheckAvailblePageView" extends="base.HotelManagement">
+		<put-attribute name="title" value="Checking Page" />
+		<put-attribute name="body" value="/WEB-INF/jsp/Register/CheckAvailability.jsp" />
+	</definition>
+	
+
+
+
+
+
+
+</tiles-definitions>
+
+
+
+
+
+
+
+
+
+
